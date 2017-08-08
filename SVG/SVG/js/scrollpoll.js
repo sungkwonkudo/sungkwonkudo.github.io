@@ -68,4 +68,7 @@ function generatePath(height, width, maxlines){
 
 document.getElementById("arc").setAttribute("d",generatePath(840,1620,100));
 ScrollDrawEffect("#arc");
+
+document.getElementById("arc1").setAttribute("d",generatePath(840,1620,70));
+ScrollDrawEffect("#arc1");
 }); // end (document).ready()
