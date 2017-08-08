@@ -1,0 +1,218 @@
+
+
+    <!DOCTYPE html>
+    <!--
+
+
+    TITLE: Course Page
+    AUTHOR: Sungkwon Kudo
+    PURPOSE: Getting started with HTML
+	ORIGINALLY CREATED ON: 01 Jan 2013
+	lAST MODIFIED ON: 26 Aug 2015
+	LAST MODIFIED BY: Sungkwon Kudo
+	MODIFICATION HISTORY: 
+	01/09/2013: Create date
+	07/04/2013: Created link for hello world program
+	29 Jan 2015: Changed directories to match typhoon structure (LJC)
+	06 May 2015: Added comments with instructions to move the css to an external file (LJC)
+	26 Aug 2015: Modified student name in header.
+	31 Aug 2015: Modified comment for internal css. 
+
+    -->
+
+<head>
+<meta charset="UTF-8">
+    
+<title>N341 Student Course Page</title>
+
+<!-- This css provides the colors and formatting for the page.
+     In this class, we will keep our css in an external file.
+     This internal css is included to keep the initial process simple. 
+     
+     Kept as reference to do internal css (SK)-->
+<style>
+*{
+	margin:0 0 6px;;
+}
+header{
+	text-align:left;
+	color:white;
+	background-color:#134;
+	padding:30px 150px;
+}
+body {
+	background-color: #CCE0DF;	/*	Use the Color Picker to find the hex code of your favorite color
+									http://www.w3schools.com/tags/ref_colorpicker.asp */
+}
+body p {
+	padding-left: 2em;
+}
+
+
+li, li a{						/* Define the formatting for the links to the labs */
+	list-style: none;
+	background-color: #43ABA4;
+	text-align: center;
+	color: white;
+	border-radius: 3px;
+	padding: 2px;
+}
+
+h2{
+	width: 100%;
+	color: #1E6E68;
+	line-height: 40px;
+}
+h3{
+	color: #1E6E68;
+	line-height: 30px;
+	text-align: center;
+}
+
+
+#assignments{			/* Define the formatting for the <div id="asssignments"> box */
+	width: 720px;
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	min-height: 400px;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: white;
+}
+#assignments ul {
+	float:left;
+	width: 300px;
+}
+
+hr{						/* Define the formatting for the <hr /> line between "Course Work" and lab links */
+	margin: 10px 0;
+	width: 100%;
+	size: 600;
+	float: left;
+}
+</style>
+<!-- End of internal css -->
+<!-- 
+	To move the css to an external file: 
+	1. copy everything that is between the <style> tag and the </style> tag
+	2. paste it to a new text file
+	3. save the file with a unique file name. You can call it myFavoriteStyle.css
+		a. You could save it in the same folder with your html file. 
+			If you do, be sure to include the following link in the <head> of your html file:
+			<link rel="stylesheet" type="text/css" href="myFavoriteStyle.css">
+		b. If you want to put your css file into its own css folder, follow these steps:
+			- Create a folder called css inside your main folder
+			- Save your myFavoriteStyle.css to the new css folder
+			- include the following link in the <head> of your html file:
+			<link rel="stylesheet" type="text/css" href="css/myFavoriteStyle.css">
+	4. Test your html page to be sure it is linking to the css page
+		Do the colors and formatting look correct?
+	5. For future web pages, just include the same link to get the desired formatting. Changing the css file
+		modifies every page that uses that file.
+ -->
+</head>
+
+<body>
+	<header>
+		<h1>CSCI N341 Course Page</h1>
+		<p>By Sungkwon Kudo</p>
+    </header>
+	<div id="assignments">
+		<h3> Course Work </h3>
+		<hr/> <!-- Draw a horizontal line with formatting defined by css -->
+ 
+		<ul>  <!-- Beginning of unordered list -->
+		
+			<li>  <!-- Start of first list item -->
+				<a href="WebPageRedux/html/webPageRedux.html">Web Page Redux</a>  <!-- link to the Test File To Launch Our N341 Journey -->
+			</li>  <!-- End of first list item -->
+			
+			<li>  <!-- Start of second list item -->
+				<a href="JSHelloWorld/jsHelloWorld.html">JS Hello World</a>  <!-- link to YOUR jsHelloWorld lab -->
+			</li>  <!-- End of second list item -->
+			
+			<li> <!-- Start of third list item -->
+				<a href="IDedAndStyled/pirateShip.html">IDed and Styled</a>
+			</li>
+			
+			<li> <!-- Start of fourth list item -->
+				<a href="MultiWrites/multiWrites.html">Multi-Writes</a>
+			</li>
+            
+            <li>
+                <a href="Prompts/prompts.html">Prompts</a>
+            </li>
+                
+            <li>
+                <a href="Conversions/conversions.html">Conversions</a>
+            </li>
+			<li>
+                <a href="Functions/">Functions</a>
+            </li>
+			<li>
+                <a href="JQueryUI/">JQuery UI</a>
+            </li>
+
+			<li>
+                <a href="Randomness/">Randomness</a>
+            </li>
+            <li>
+                <a href="RandomnessUI/">Randomness UI</a>
+            </li>
+			<li>
+                <a href="Shakers/">Shakers and Movers</a>
+            </li>
+        </ul>
+        <ul>
+			<li>
+                <a href="Iffy/">Iffy</a>
+            </li>
+			<li>
+                <a href="MoreIfs/">MoreIfs</a>
+            </li>
+			<li>
+                <a href="LoopingArrays/">Looping Through Arrays</a>
+            </li>
+			<li>
+                <a href="Strings/">Strings</a>
+            </li>      			
+            <li>
+                <a href="Buttons/">Buttons</a>
+            </li>               
+			<li>
+                <a href="AhoyJQ/">AhoyJQ</a>
+            </li>			
+            <li>
+                <a href="PickMe/">Pick Me</a>
+            </li>
+            <li>
+                <a href="FilteredPick/">Filtered Pick</a>
+            </li>
+            <li>
+                <a href="Triggered/">Triggered</a>
+            </li>            
+            <li>
+                <a href="DownRightShot/">Down Right Shot</a>
+            </li>                 
+			<li>
+                <a href="Final/">Final Project</a>
+            </li>            
+		</ul>  <!-- End of unordered list -->
+	</div><!-- end div id="assignments" -->
+	
+	<div id="assignments">
+		<h3>Blackbelt Challenges</h3>
+		<ul>
+			<li>
+				<a href="BBAhoyJQ/">BB AhoyJQ</a>
+			</li>
+			<li>
+				<a href="BBFilteredPick/">BB Filtered Pick</a>
+			</li>			
+			<li>
+				<a href="BBPickMe/">BB Pick Me!</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

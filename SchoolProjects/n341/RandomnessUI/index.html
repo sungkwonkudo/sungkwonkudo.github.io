@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!--
+
+TITLE: index.html, randomness
+AUTHOR: Sungkwon Kudo
+PURPOSE: Randomness Lab
+ORIGINALLY CREATED ON: 16 Sep 2015
+lAST MODIFIED ON: 
+LAST MODIFIED BY: Sungkwon Kudo (SK)
+MODIFICATION HISTORY: 
+16 Sep 2015: Date Created.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Randomness</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <link rel="stylesheet"  href="../JQueryUI/jquery-ui.css">
+</head>
+
+<body>
+
+<h2 class="demoHeaders">Extra GROG</h2>
+   
+<!-- No need for a tab here, just messing around with the UI. -->
+<div id="tab">
+    <ul>
+        <li><a href="#tabs-1">Guess 1</a></li>
+        <li><a href="#tabs-2">Guess 2</a></li>
+        <li><a href="#tabs-3">Guess 3</a></li>
+    </ul>
+   		<div id="tabs-1"><span id="navi"></span></div>
+		<div id="tabs-2"><span id="doge"></span></div>
+		<div id="tabs-3"><span id="cook"></span></div>
+</div>
+
+<!-- A dialog button to pop up the captain's response. -->
+<p><a href="#" id="dialog-link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>Here's me number</a></p>
+    <div id="dialog" title="Arrrrr">
+        <p><span id="capt"></span></p>
+    </div>
+    
+    
+    <script src="js/randomness.js"></script>
+    <script src="../JQueryUI/external/jquery/jquery.js"></script>
+    <script src="../JQueryUI/jquery-ui.js"></script>
+
+    
+    <button id="refresh" title="Refresh" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-refresh"></span></button>
+
+</body>
+</html>

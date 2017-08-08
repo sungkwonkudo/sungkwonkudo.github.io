@@ -1,0 +1,186 @@
+/* 
+Filename: NSeriesCourseStylesheet.css
+Purpose: Styling lab instructions
+Modification History:
+05 Mar 2015: Add .mask and update .codebox to prevent students from selecting code samples (LJC)
+11 Mar 2015: Add table formatting for jQuery event lab instructions (LJC)
+16 Jun 2015: Remove the text-indent in the table formatting (LJC)
+22 Jun 2015: Add color-coding for codebox (LJC)
+30 Jun 2015: Delete duplicate .toolbar code (LJC)
+*/
+
+html {
+	margin: 0px; padding: 0px;
+}
+
+.codebox {
+	text-align: left;
+	width: 85%; 
+	min-height: 30px;
+	margin-left: 20px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	font-weight: 600;
+	color: black;
+
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	
+	position: relative;
+	margin: 0 auto; 
+	padding: 15px;
+	overflow: hidden;
+	border: 1px solid black;
+}
+
+.codebox ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+	font-family: monospace;
+	font-size: 12px;
+
+}
+
+.codebox .mask {
+	display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.codebox .comment {
+	color: #008000;		/* green */
+	font-weight: normal;
+}
+
+.codebox .keyword {
+	color: #000080;		/* blue */
+	font-size: 14px;
+	font-weight: bolder;
+}
+
+.codebox .textValue {
+	color: #808080;		/* gray */
+}
+
+#container {
+	margin: 1em; min-width: 700px; max-width: 800px;
+}
+.container {
+	margin: 1em; min-width: 700px; max-width: 800px;
+}
+p {
+	padding-left: font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+footer {
+	font-family: Verdana, Arial, Helvetica, sans-serif; align: center;
+}
+h1 {
+	color: rgb(0, 0, 128); text-transform: capitalize; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 2.4em; font-style: normal;
+}
+h2 {
+	color: rgb(0, 0, 128); text-transform: capitalize; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 2em; font-style: normal;
+}
+h3 {
+	color: rgb(255, 102, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 1.5em;
+}
+table.tabular {
+	font-family: Verdana, Arial, Helvetica, sans-serif; border-spacing: 0 px;
+}
+
+table, td {
+   border: 1px solid black;
+}
+table {
+   width: 82%;
+ }
+td#col1 {
+   width: 132px;
+       }
+td#col2 {
+   width: 184px;
+}
+
+ul {
+	padding-left: 4em; font-family: Verdana, Arial, Helvetica, sans-serif; margin-left: 16px;
+}
+ul ul {
+	font-size: 1em; list-style-type: disc;
+}
+body {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color:#000080;
+}
+.sectionTitle {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 14pt;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-align: center;
+border-bottom-width: 2px;
+border-bottom-style: dashed;
+border-bottom-color: #FF6600;
+margin-bottom: 1px;
+}
+.courseWork {
+text-align: left;
+}
+.pageHeader {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 24px;
+font-weight: normal;
+font-variant: small-caps;
+background-position: center;
+border-bottom-width: 2px;
+border-bottom-style: dashed;
+border-bottom-color: #FF6600;
+text-align: center; 
+margin-bottom: 0px;
+}
+.pageHeaderLinks {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-weight: normal;
+text-align: center;
+margin: 5px 5px 15px;
+}
+
+.pageTitle {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 24px;
+font-weight: normal;
+text-align: center;
+}
+
+ul.toolbar {
+margin:0;
+margin-right: 45px;
+padding:0;
+text-align:right;
+}
+
+ul.toolbar li {
+display:inline;
+padding:0 10px;
+list-style-type:none;
+font-size:10px;
+}
+
+ul.toolbar li a {
+text-decoration:none;
+color:#000080;;
+}
+
+ul.toolbar li a:hover {
+text-decoration:underline;
+background-color:#000080;
+color:#fff;
+}

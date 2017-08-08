@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<!--
+
+TITLE: Form Prototype index.html
+AUTHOR: Sungkwon Kudo
+PURPOSE: Form Protoype for Final Project
+LAST MODIFIED BY: Sungkwon Kudo (SK)
+MODIFICATION HISTORY: 
+16 Sep 2015: Date Created.
+
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Prototype</title>
+    <link rel="stylesheet" type="text/css" href="../jquery-ui-1.11.4.custom/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="../jquery-ui-1.11.4.custom/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+	<script src="js/formproto.js"></script>
+</head>
+
+<body>
+<h1>Visual Sample</h1>
+<form id="target">
+<div id="accordion">
+	<h3 class="eng">Optional</h3>
+	<div class="eng">
+		<h2>General Info</h2>
+		<p>Date of Birth</p>
+			<input type="text" id="datepicker" class="reset">
+		<p>Gender</p>
+		<div id="set">
+			<input type="radio" id="r1" name="radio" value="Male">
+
+			<input type="radio" id="r2" name="radio" value="Female">
+				<label for="r2">Female</label>
+			<input type="radio" id="r3"  name="radio" checked="checked" value="blank">
+				<label for="r3">Leave Blank</label>
+		</div>
+		<p>Phone Number</p>
+			<input type="tel" class="reset" id='phone'>
+		<p>Cell</p>	
+			<input type="tel" class="reset" id='cell'>
+		<h2>Address</h2>
+			<p>City</p>
+				<input type="text" class="reset" id='city'>
+			<p>State</p>
+				<div class="ui-widget">
+					<input id="states" class="reset">
+				</div>
+	</div>
+	<h3 class="eng">Required</h3>
+	<div class="eng">
+
+		<p>Name</p>
+			<input type="text" class="reset" id="inName">
+		<p>Email</p>
+			<input type="email" class="reset" id="inEmail">
+		<p>Password</p>
+			<input type="password" class="reset" id="inPass">
+		<p>Would you like newsletters for special sales?</p>
+			<input type="checkbox" id="newsletter">
+				<label for="newsletter">Sign up for periodic emails</label>
+		<p><input type="submit" value="Submit" id="submit"></p>
+		<p>
+		Please check all your information before submitting.
+		</p>
+		<input type="button" value="Reset Fields" id="clear">
+		<input type='button' value='scrape' id='scrape'>
+	</div>
+</div>
+</form>
+
+<div id='simple'></div>
+<output id="out"><label for="out" id="label">This is the output area.</label></output>
+
+
+</body>
+</html>
+
+

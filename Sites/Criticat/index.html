@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!--
+TITLE: index.html, Criticat
+AUTHOR: Sungkwon Kudo
+PURPOSE: A simple exercise in making a commenting website (static)
+LAST MODIFIED BY: Sungkwon Kudo
+MODIFICATION HISTORY:
+24 June 2017: Date created.
+ -->
+
+<html>
+<head>
+  <link rel="stylesheet" href="css/tabs.css">
+  <link rel="stylesheet" href="css/criticat.css">
+  <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="resources/DOMPurify-master/dist/purify.min.js"></script>
+  <script type="text/javascript" src="js/tabs.js"></script>
+  <script type="text/javascript" src="js/sanitize.js"></script>
+  <title>Criticat</title>
+</head>
+<body>
+<h1 id="title">criticat</h1>
+
+<p>A simple template for a critiquing website. </p>
+
+
+<input id="youtube-input" type="text" name="urlinput" placeholder="Youtube URL">
+<input type="button" onclick="getVidEmbed('youtube-video','youtube-input');" value="Enter">
+
+<iframe id="youtube-video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+<hr>
+<div class="tab">
+  <button class="comments-item tablinks" onclick="openTab(event, 'positive')" type="button" name="button">Positive</button>
+  <button class="comments-item tablinks" onclick="openTab(event, 'neutral')" type="button" name="button">Neutral</button>
+  <button class="comments-item tablinks" onclick="openTab(event, 'negative')" type="button" name="button">Negative</button>
+</div>
+<div id="negative" class="tabcontent">
+  <p>Bich about it</p>
+  <input class="comment" type="text" name="comments" value="">
+</div>
+
+<div id="neutral" class="tabcontent">
+  <p>General observations</p>
+  <input class="comment" type="text" name="comments" value="">
+</div>
+
+<div id="positive" class="tabcontent">
+  <p>Praise me</p>
+  <input class=comment" type="text" name="comments" value="">
+</div>
+
+
+
+</body>
+</html>

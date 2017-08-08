@@ -1,0 +1,51 @@
+body {
+    font-family: verdana, helvetica, sans-serif;
+    margin-left: 15%;
+    margin-right: 20%;
+    background: url("../assets/OWM_kaisendon_edited.jpg") top right no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+h1 {
+    background-color: white;
+    color: red;
+    font-family: serif;
+    font-size: 400%;
+    text-align: center;
+    border-radius: 7%;
+}
+
+h2 {
+    background-color: white;
+    text-align: center;
+}
+#navleft {
+    font-size: 100%;
+    position: fixed;
+    left: 0px;
+    top: 20%;
+}
+
+#info {
+    position: fixed;
+    right: 0px;
+    top: 20%;
+    font-family: verdana, helvetica, sans-serif;
+    font-size: 14px;
+    text-align: right;
+    border: solid 1px black;
+    background-color: white;
+    border-radius: 7%;
+}
+
+#output {
+    font-family: verdana, helvetica, sans-serif;
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.nav {
+    width: 100px;
+}

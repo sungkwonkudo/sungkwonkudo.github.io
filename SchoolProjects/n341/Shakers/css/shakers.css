@@ -1,0 +1,87 @@
+/*
+TITLE: shakers.css
+AUTHOR: Sungkwon Kudo
+PURPOSE: css for 
+LAST MODIFIED BY: Sungkwon Kudo
+MODIFICATION HISTORY: 
+: Date created.
+*/
+
+html {
+	margin: 0px; padding: 0px;
+}
+
+h1 {
+    text-align: center;
+    cursor: pointer;
+}
+
+body {
+	font-family: helvetica;
+	font-size: 300%;
+	text-align: center;
+}
+
+div {
+    cursor: pointer;
+}
+
+.different {
+    font-family: Times New Roman, serif;
+    text-align: center;
+    background-color: black;
+}
+
+.different ul{
+    text-align: right;
+    font-size: 50%;
+}
+
+.different a {
+    color: white;
+}
+
+.different a:hover {
+    border: dotted white 1px;
+}
+
+#tl.different {
+    background-color: gray;
+}
+
+#tl {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	right: 40%;
+	bottom: 40%;
+	background: #AA7639;
+	color: white;
+}
+#tr {
+	position: absolute;
+	top: 0%;
+	left: 60%;
+	right: 0%;
+	bottom: 40%;
+	background: #28546C;
+	color: white;
+}
+#bl {
+	position: absolute;
+	top: 60%;
+	left: 0%;
+	right: 40%;
+	bottom: 0%;
+	background: #512C73;
+	color: white;
+}
+#br {
+	position: absolute;
+	top: 60%;
+	left: 60%;
+	right: 0%;
+	bottom: 0%;
+	background: #AAA439;
+	color: white;
+}

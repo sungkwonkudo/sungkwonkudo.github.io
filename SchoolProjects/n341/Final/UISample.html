@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<!--
+ Filename: uiValSimple.html
+ Written by: Laurie Callahan (LJC)
+ Purpose: Getting the jQuery UI and the jQuery Validation plugin to work together
+ Date: 8 Dec 2014
+ Modification History:
+ 28 Oct 2015: Simplify code and change variable names (LJC)
+ 29 Oct 2015: Update jQuery library to 2.1.4 (LJC)
+ 30 Oct 2015: Combine the two document.ready (UI & Validation) sections (LJC)
+ 05 Nov 2015: Put three fields in the form (LJC)
+ 08 Nov 2015: Add UI css & change title, update tabs (LJC)
+ 16 Nov 2015: Change password field to type=password. (LJC)
+-->
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>UI Simple</title>
+	
+	<style> /* This css should be put into an external file for your project */
+	/* CSS for jQuery UI Library */
+	body{
+		font: 62.5% "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	select {
+		width: 200px;
+	}
+	/* End CSS for jQuery UI Library */
+
+	/* Form Appearance - Please put your form CSS in a separate file */
+	#flintstoneForm {
+		margin-top: 25px;		/* Set top margin of form */
+		width: 600px;			/* Set width of form */
+	}
+	#flintstoneForm label {
+		width: 250px;			/* Set width of form labels */
+	}
+	#flintstoneForm label.error {
+		margin-left: 5px;		/* Indent error messages - used in validator */
+	}
+	</style>
+
+	<!-- Google-hosted jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<!-- UI Library -->
+	<!-- Make sure your path is set correctly -->
+	<link href="jquery-ui-1.11.4.custom/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet" type="text/css">  <!-- css used for ui theme -->
+	<script src="jquery-ui-1.11.4.custom/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>  <!-- jQuery UI library -->
+
+	<!-- Validation Plugin -->
+	<!-- Use locally stored file instead of this js file. They will be in your validation folder. -->
+	<script src="validation/dist/jquery.validate.js"></script>
+
+	<script> // Please put your JS in a separate file.
+	$(document).ready(function() {
+	
+		/* Validation plugin - Define form functionality */
+		$.validator.setDefaults({
+			submitHandler: function() {  // Send output to screen
+				$('#pageBedrockContent').append("<br><br> Username: " + $('#barneyName').val())
+										.append("<br> Password: " + $('#wilmaPassword').val())
+										.append("<br> Confirm: " + $('#bettyPassword').val());
+				alert("Passed validation & submitted.");
+			} // end submitHandler
+		}); // end validator.setDefaults
+		   
+		// Use default rules and error messages when validating
+		$("#flintstoneForm").validate();
+
+		/* End Validation plugin */
+
+		/* jQuery UI Library definitions */
+		$( "button" ).button();		// Use the jQuery UI library to tell buttons how to work
+		$( "#tabs" ).tabs();		// Use the jQuery UI library to tell tabs how to work
+		/* End jQuery UI Library */
+		
+	}); // end document.ready
+	</script>
+	
+</head>
+
+<body>
+	<h1>UI & Simple Validation Together</h1>
+
+  		<!-- UI Tabs -->
+		<h2 class="demoHeaders">Tabs</h2>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">UI Test</a></li>
+				<li><a href="#tabs-2">UI Library Button</a></li>
+				<li><a href="#tabs-3">Validation Plugin Button</a></li>
+				<li><a href="#tabs-4">Combined Submit Button</a></li>
+			</ul>
+			<div id="tabs-1">If the tabs work, the jQuery UI library is working.</div>
+			<div id="tabs-2"><textarea rows="4" cols="100"><button type="submit" id="btnFlintstoneSubmit">
+				 works with the jQuery UI and form scrape if js code for the button contains
+return false;
+				 as the last line of the function.</textarea></div>
+			<div id="tabs-3"><textarea rows="4" cols="100"><button type="submit">
+				 works with the jQuery Validation plugin</textarea></div>
+			<div id="tabs-4"><textarea rows="4" cols="100"><button type="submit">
+				 works when using both the UI Library and the Validation plugin together.
+return false;
+				 is no longer needed because the validation code prevents the DOM from reloading.</textarea></div>
+		</div> <!-- end tabs -->
+		  	
+        <form id="flintstoneForm">		<!-- flintstoneForm is the form name that is used in the jQuery for the validation plugin -->
+			<fieldset>
+                <legend>This is My Form with Simple Validation</legend>
+				<p>
+				   <label for=barneyName>Username</label>
+				   <input type="text" id="barneyName" placeholder="Type a name Here" required autofocus><br><br>
+				   
+				   <label for=wilmaPassword>Password</label>
+				   <input type="password" id="wilmaPassword" placeholder="Yabba Dabba Doo"><br><br>
+				   
+				   <label for=bettyPassword>Confirm Password</label>
+				   <input type="password" id="bettyPassword" placeholder="Type the password again.">
+				   
+				</p>
+	            <button type="submit" id="btnFlintstoneSubmit">Submit</button>
+				<button type=reset>Clear</button>
+			</fieldset>
+		</form>
+
+        <span id="pageBedrockContent"> <br>Sample Output:</span>
+ 
+</body>
+
+</html>

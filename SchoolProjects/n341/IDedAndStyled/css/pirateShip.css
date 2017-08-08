@@ -1,0 +1,86 @@
+/*
+
+FILE NAME: pirateShip.css
+TITLE: Pirate Ship
+AUTHOR: Sungkwon Kudo
+PURPOSE: IDed &Styled Assignment (CS341)
+ORIGINALLY CREATED: 28 Aug 2015
+LAST MODIFIED ON:
+LAST MODIFIED BY: 
+MODIFICATION HISTORY:
+28 Aug 2015: Create Date
+*/
+
+/* 
+Image courtesy of americanairpowermuseum.com.
+url: http://americanairpowermuseum.com/wordpress/wp-content/uploads/2013/10/Parchment-42.jpg */
+body {
+	background-image: url("../assets/parchment-42.jpg");
+	
+
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/* Header Format */
+#krakenKiller {
+	color: black;
+	font-family: Georgia;
+	font-style: oblique;
+	text-align: center;
+	border-style: groove;
+	border-radius:20%;
+	
+}
+
+/* Content Format */
+#davyJonesDeath {
+	font-family: Georgia;
+	font-style: italic;
+	text-align: center;
+	font-size: 120%;
+	padding-top: 20%;
+}
+
+#theHellishWhale {
+	color: #666633;
+	text-align: center;
+	font-weight: 900;
+	font-style: oblique;
+	
+	/* Forces text to appear lower and adds space below. */
+	padding-top: 150%;
+	padding-bottom: 100%;
+}
+
+#scarborough {
+	text-align: center;
+	font-weight: lighter;
+	font-style: italic;
+	padding-bottom: 30%;
+}
+
+/*
+Margins and Borders 
+Shadows referenced from source in http://cs.iupui.edu/n341/labs/htmlCss.html
+Modified to the point of being unrecognizable.
+*/
+
+#flyingDutchman {
+	margin: auto;
+	
+	/* Turns the box into a circle */
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	
+	box-shadow: 0px 0px 100px 60px black;
+	
+	/* Self-adapting centering technique adopted from 
+	https://css-tricks.com/centering-percentage-widthheight-elements/ */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -45%);
+	
+	position: fixed;
+}

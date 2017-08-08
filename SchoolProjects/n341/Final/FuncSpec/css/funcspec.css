@@ -1,0 +1,17 @@
+body{
+	font-family: verdana;
+	padding-left: 10%;
+}
+
+p {
+	width: 524px;
+}
+
+footer {
+	font-size: 90%;
+	padding: 10px;
+}
+
+div {
+	padding-left: 5%;
+}
