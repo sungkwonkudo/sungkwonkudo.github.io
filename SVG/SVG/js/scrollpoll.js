@@ -56,15 +56,14 @@ function generateSVG(height, width, maxlines){
     var trackWidth;
     
     // Create nodes
-    var svg = document.createElement("svg");
-    var path = document.createElement("path");
+    var svg = document.createElementNS("https://www.w3.org/2000/svg","svg");
+    var path = document.createElementNS("https://www.w3.org/2000/svg","path");
     
     // Set up attributes
-    var viewText="0,0,"+height+","+width;
+    var viewText="0 0  "+width+" "+height;
     
     // Set the initial point
     var start = "M"+Math.floor(Math.random()*width).toString()+","+Math.floor(Math.random()*height).toString();
-    
     var dvalue = start;
     
     // Create SVG 'd' attribute using a for loop
@@ -77,8 +76,14 @@ function generateSVG(height, width, maxlines){
     }
     
     // Insert attributes
-    path.viewBox = viewText;
-    path.d=dvalue;
+    svg.setAttributeNS(null,"viewBox", viewText);
+    svg.setAttributeNS(null,"preserveAspectRatio", "xMidYMid meet");
+    
+    path.setAttribute("d", dvalue);
+    path.setAttribute("stroke", "black");
+    path.setAttribute("stroke-width", "20");
+
+    path.setAttribute("fill", "none");
     
     // Append nodes and return svg node
     svg.appendChild(path);
@@ -86,7 +91,11 @@ function generateSVG(height, width, maxlines){
 }
 
 
+
+
 var node=document.getElementById("test");
-generateSVG(1,1, 1);
-ScrollDrawEffect("#arc");
+var scribble = generateSVG(1620,840, 20);
+scribble.childNodes[0].id="arc";
+node.appendChild(scribble);
+// ScrollDrawEffect("#arc");
 }); // end (document).ready()
