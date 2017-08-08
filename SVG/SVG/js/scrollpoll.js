@@ -49,7 +49,7 @@ function ScrollDrawEffect(SVG){
 // Create a random SVG path generator
 // IN: Dimensions of width, height, along with maximum number of lines
 // OUT: An SVG path.
-function generateSVG(height, width, maxlines){
+function generatePath(height, width, maxlines){
     // Set the initial point
     var start = "M"+Math.floor(Math.random()*width).toString()+","+Math.floor(Math.random()*height).toString();
     var dvalue = start;
@@ -66,12 +66,6 @@ function generateSVG(height, width, maxlines){
     return dvalue;
 }
 
-
-
-
-var node=document.getElementById("test");
-var scribble = generateSVG(1620,840, 20);
-scribble.childNodes[0].id="arc";
-node.appendChild(scribble);
-// ScrollDrawEffect("#arc");
+document.getElementById("arc").setAttribute("d",generatePath(840,1620,100));
+ScrollDrawEffect("#arc");
 }); // end (document).ready()
