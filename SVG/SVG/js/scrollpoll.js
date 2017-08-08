@@ -78,7 +78,7 @@ function generateSVG(height, width, maxlines){
     
     // Insert attributes
     path.viewBox = viewText;
-    path.d=dvaule;
+    path.d=dvalue;
     
     // Append nodes and return svg node
     svg.appendChild(path);
