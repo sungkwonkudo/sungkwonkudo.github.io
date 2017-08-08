@@ -48,20 +48,8 @@ function ScrollDrawEffect(SVG){
 
 // Create a random SVG path generator
 // IN: Dimensions of width, height, along with maximum number of lines
-// OUT: An SVG node.
+// OUT: An SVG path.
 function generateSVG(height, width, maxlines){
-    // Set up border variables that track the height and width 
-    // to ensure that the lines don't go outside the view box.
-    var trackHeight;
-    var trackWidth;
-    
-    // Create nodes
-    var svg = document.createElementNS("https://www.w3.org/2000/svg","svg");
-    var path = document.createElementNS("https://www.w3.org/2000/svg","path");
-    
-    // Set up attributes
-    var viewText="0 0  "+width+" "+height;
-    
     // Set the initial point
     var start = "M"+Math.floor(Math.random()*width).toString()+","+Math.floor(Math.random()*height).toString();
     var dvalue = start;
@@ -75,19 +63,7 @@ function generateSVG(height, width, maxlines){
         dvalue+="L"+randomWidth+","+randomHeight;
     }
     
-    // Insert attributes
-    svg.setAttributeNS(null,"viewBox", viewText);
-    svg.setAttributeNS(null,"preserveAspectRatio", "xMidYMid meet");
-    
-    path.setAttribute("d", dvalue);
-    path.setAttribute("stroke", "black");
-    path.setAttribute("stroke-width", "20");
-
-    path.setAttribute("fill", "none");
-    
-    // Append nodes and return svg node
-    svg.appendChild(path);
-    return svg;
+    return dvalue;
 }
 
 
