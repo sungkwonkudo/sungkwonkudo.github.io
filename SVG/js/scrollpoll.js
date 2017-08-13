@@ -24,7 +24,6 @@ window.addEventListener('scroll', function(e){
 ScrollDrawEffect()
 IN: String
 	A css selector of the SVG to be scrolled through.
-OUT: void
 **/
 function ScrollDrawEffect(SVG){
 	// Selects the SVG Path and gets its total length to work with.
